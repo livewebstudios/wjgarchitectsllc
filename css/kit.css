@@ -557,43 +557,7 @@ summary::-webkit-details-marker { display: none; }
   .d2b__drawing { display: none; }
 }
 
-/* ---------- Chooser (build/index.html) and the "soon" stub ---------- */
-.chooser { min-height: 100svh; padding-block: var(--s-5) var(--s-7); }
-.chooser__head { display: grid; gap: var(--s-3); margin-bottom: var(--s-5); }
-.chooser__head h1 { font: 400 var(--t-6)/1 var(--f-serif); letter-spacing: -0.01em; }
-.chooser__head h1 em { font-style: italic; }
-.chooser__grid { display: grid; gap: var(--s-5) var(--s-4); }
-.chooser__card { display: grid; gap: var(--s-3); text-decoration: none; }
-.chooser__thumb {
-  position: relative;
-  aspect-ratio: 987 / 610;
-  transition: translate 0.4s var(--ease);
-}
-.chooser__thumb picture, .chooser__thumb img { width: 100%; height: 100%; object-fit: cover; }
-.chooser__thumb-in { position: absolute; inset: 0; overflow: hidden; }
-.chooser__card--2 .chooser__thumb-in picture:last-child { position: absolute; inset: 0; clip-path: polygon(0 0, 58% 0, 42% 100%, 0 100%); }
-.chooser__card--3 .chooser__thumb-in { border-radius: 21px; background: var(--wjg-night); }
-.chooser__card--3 img { filter: grayscale(1) contrast(1.12) brightness(0.85); }
-.chooser__card--3 .phi { --draw: 0; --sq: 0.5; --phi-c: var(--gold-hi); }
-.chooser__card--4 .chooser__thumb-in { border-radius: 21px; }
-.chooser__card--1 .phi { --draw: 0; --sq: 0.45; }
-.chooser__chips {
-  position: absolute;
-  left: var(--s-2); right: var(--s-2); bottom: var(--s-2);
-  display: flex; gap: var(--s-1);
-  padding: var(--s-1);
-  border-radius: 13px;
-  background: var(--white);
-}
-.chooser__chips span { flex: 1; height: 1.3rem; border-radius: 999px; background: var(--cool); }
-.chooser__chips span:first-child { background: var(--wjg-navy); }
-.chooser__meta { display: grid; gap: var(--s-1); }
-.chooser__num { font: 500 var(--t-0)/1.3 var(--f-mono); letter-spacing: 0.14em; color: var(--label); }
-.chooser__name { font: 400 var(--t-4)/1.05 var(--f-serif); }
-.chooser__card p { font-size: 1rem; color: var(--ink-soft); }
-@media (hover: hover) { .chooser__card:hover .chooser__thumb { translate: 0 -4px; } }
-@media (min-width: 48rem) { .chooser__grid { grid-template-columns: 1fr 1fr; } }
-
+/* ---------- The "soon" stub ---------- */
 .soon {
   display: grid;
   place-content: center;

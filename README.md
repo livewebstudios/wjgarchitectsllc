@@ -8,7 +8,7 @@ Built by Live Web Studios, November 2026.
 
 | Path | What it is |
 |---|---|
-| `index.html` | The demo chooser |
+| `index.html` | "Pick a direction" page for Wayne: the four demos side by side, the six traced drawings to check, and what we still need from him |
 | `demos/1-golden-section/` | Bright editorial page on a visible 61.8 / 38.2 grid. Golden ratio visible. |
 | `demos/2-drawn-to-built/` | Paper and linework. Drawings become photos on scroll. Golden ratio hidden. |
 | `demos/3-composition/` | Dark gallery with golden overlays on black and white photos. Golden ratio visible. |
@@ -57,5 +57,5 @@ Max 1600px wide, JPG quality 82 stepping down only to meet the size budget (300K
 - Remove the `X-Robots-Tag` header in `netlify.toml`, the `noindex` meta tag on each page, and the `Disallow: /` in `robots.txt`.
 - Remove the `/soon/` redirects in `_redirects` as real pages replace them. Add 301s for `/services-2/` and `/contact-us/`.
 - Replace the Formspree ID (`REPLACE_ME`) and the GA4 ID (`G-XXXXXXXXXX`).
-- Promote the chosen demo to `/`, delete the other three, the chooser and the demo bar.
+- Promote the chosen demo to `/`, delete the other three, the pick-a-direction page (`index.html`, `css/pick.css`, `images/directions/`) and the demo bar.
 - See `OPEN_QUESTIONS.md`.

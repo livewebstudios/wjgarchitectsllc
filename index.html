@@ -1,118 +1,356 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WJG Architects | Four Home Page Demos</title>
-  <meta name="description" content="Four home page directions for WJG Architects, built from one design system. A private preview from Live Web Studios.">
-  <!-- CANONICAL: preview-only page. It is deleted at launch, when the chosen demo becomes https://wjgarchitectsllc.com/ -->
+  <title>Pick a Direction | WJG Architects Home Page</title>
+  <meta name="description" content="Four directions for the new WJG Architects home page, side by side. A private preview from Live Web Studios.">
+  <!-- CANONICAL: preview-only page. It is deleted at launch, when the chosen direction becomes https://wjgarchitectsllc.com/ -->
   <meta name="robots" content="noindex, nofollow">
-  <meta property="og:title" content="WJG Architects | Four Home Page Demos">
-  <meta property="og:description" content="Four home page directions for WJG Architects, built from one design system.">
+  <meta property="og:title" content="Pick a Direction | WJG Architects Home Page">
+  <meta property="og:description" content="Four directions for the new WJG Architects home page, side by side.">
   <meta property="og:image" content="https://wjgarchitectsllc.com/images/og-image.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="fonts/instrument-serif-400.woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" href="images/directions/demo-1-desktop.webp">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/kit.css">
+  <link rel="stylesheet" href="css/pick.css">
   <!-- GA4: replace G-XXXXXXXXXX (not needed on this preview page) -->
-  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js motion-failed');</script>
 </head>
 <body id="top">
-  <main class="chooser wrap" id="main">
-    <header class="chooser__head">
-      <img src="images/logoRGB.png" alt="WJG Architects, LLC" width="216" height="32">
-      <span class="eyebrow">HOME PAGE DEMOS · NOVEMBER 2026</span>
-      <h1>One design system. <em>Four</em> ways to wear it.</h1>
-      <p>Same words, same projects, same logo in all four. Only the design changes, so the comparison is fair. Pick the one that sounds like you.</p>
-    </header>
+  <a class="skip" href="#main">SKIP TO CONTENT</a>
+  <svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  </svg>
 
-    <div class="chooser__grid">
-      <a class="chooser__card chooser__card--1" href="demos/1-golden-section/index.html">
-        <div class="chooser__thumb overshoot">
-          <div class="chooser__thumb-in">
-            <picture>
-              <source srcset="images/projects/residential/brastad-exterior.webp" type="image/webp">
-              <img src="images/projects/residential/brastad-exterior.jpg" alt="Brastad-Knapp Residence, Woodcliff Lake, New Jersey" width="1500" height="1000">
-            </picture>
-            <svg class="phi phi--flip-x" viewBox="0 0 987 610" fill="none" aria-hidden="true" focusable="false">
-              <g class="phi__squares" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke">
-                <rect x=".5" y=".5" width="986" height="609"/>
-                <path d="M610 0V610M610 377H987M754 377V610M610 466H754M699 377V466M699 432H754M720 432V466M699 445H720M712 432V445"/>
-              </g>
-              <path class="phi__spiral" pathLength="1" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"
-                d="M0 610A610 610 0 0 1 610 0A377 377 0 0 1 987 377A233 233 0 0 1 754 610A144 144 0 0 1 610 466A89 89 0 0 1 699 377A55 55 0 0 1 754 432A34 34 0 0 1 720 466A21 21 0 0 1 699 445A13 13 0 0 1 712 432A8 8 0 0 1 720 440"/>
-            </svg>
-          </div>
-        </div>
-        <div class="chooser__meta">
-          <span class="chooser__num">DEMO 1 · GOLDEN RATIO VISIBLE</span>
-          <h2 class="chooser__name">Golden Section</h2>
-          <p>A bright, editorial page where the golden ratio is the layout itself, and you can see it.</p>
-        </div>
-      </a>
-
-      <a class="chooser__card chooser__card--2" href="demos/2-drawn-to-built/index.html">
-        <div class="chooser__thumb overshoot">
-          <div class="chooser__thumb-in">
-            <picture>
-              <source srcset="images/projects/residential/brastad-exterior.webp" type="image/webp">
-              <img src="images/projects/residential/brastad-exterior.jpg" alt="Brastad-Knapp Residence, half drawing and half photograph" width="1500" height="1000" loading="lazy">
-            </picture>
-            <picture aria-hidden="true">
-              <source srcset="images/drawn/brastad-exterior.webp" type="image/webp">
-              <img src="images/drawn/brastad-exterior.jpg" alt="" width="1500" height="1000" loading="lazy">
-            </picture>
-          </div>
-        </div>
-        <div class="chooser__meta">
-          <span class="chooser__num">DEMO 2 · GOLDEN RATIO HIDDEN</span>
-          <h2 class="chooser__name">Drawn to Built</h2>
-          <p>The whole page is a set of drawings that turn into buildings as you scroll.</p>
-        </div>
-      </a>
-
-      <a class="chooser__card chooser__card--3" href="demos/3-composition/index.html">
-        <div class="chooser__thumb">
-          <div class="chooser__thumb-in">
-            <picture>
-              <source srcset="images/projects/industrial/670-belleville.webp" type="image/webp">
-              <img src="images/projects/industrial/670-belleville.jpg" alt="670 Belleville Turnpike, Kearny, New Jersey, in black and white" width="1600" height="1200" loading="lazy">
-            </picture>
-            <svg class="phi" viewBox="0 0 987 610" fill="none" aria-hidden="true" focusable="false">
-              <g class="phi__squares" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke">
-                <rect x=".5" y=".5" width="986" height="609"/>
-                <path d="M610 0V610M610 377H987M754 377V610M610 466H754M699 377V466M699 432H754M720 432V466M699 445H720M712 432V445"/>
-              </g>
-              <path class="phi__spiral" pathLength="1" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"
-                d="M0 610A610 610 0 0 1 610 0A377 377 0 0 1 987 377A233 233 0 0 1 754 610A144 144 0 0 1 610 466A89 89 0 0 1 699 377A55 55 0 0 1 754 432A34 34 0 0 1 720 466A21 21 0 0 1 699 445A13 13 0 0 1 712 432A8 8 0 0 1 720 440"/>
-            </svg>
-          </div>
-        </div>
-        <div class="chooser__meta">
-          <span class="chooser__num">DEMO 3 · GOLDEN RATIO VISIBLE</span>
-          <h2 class="chooser__name">Composition</h2>
-          <p>A dark gallery. The buildings in black and white, with the geometry of proportion drawn over them in gold.</p>
-        </div>
-      </a>
-
-      <a class="chooser__card chooser__card--4" href="demos/4-get-set/index.html">
-        <div class="chooser__thumb">
-          <div class="chooser__thumb-in">
-            <picture>
-              <source srcset="images/projects/commercial/ohara-offices.webp" type="image/webp">
-              <img src="images/projects/commercial/ohara-offices.jpg" alt="John O'Hara Construction offices, East Orange, New Jersey" width="1333" height="1000" loading="lazy">
-            </picture>
-            <div class="chooser__chips" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          </div>
-        </div>
-        <div class="chooser__meta">
-          <span class="chooser__num">DEMO 4 · GOLDEN RATIO HIDDEN</span>
-          <h2 class="chooser__name">Get Set</h2>
-          <p>The practical one. Bright, card based, and built to get the right visitor to the right proof and a phone call in one tap.</p>
-        </div>
-      </a>
+  <header class="pk-top">
+    <div class="wrap pk-top__in">
+      <img class="pk-logo" src="images/logoRGB.png" alt="WJG Architects, LLC" width="216" height="32">
+      <p class="pk-top__for">PREPARED FOR WAYNE J. GUSKIND, AIA, NCARB</p>
     </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Intro -->
+    <section class="pk-intro">
+      <div class="wrap pk-intro__grid">
+        <div class="pk-intro__copy">
+          <span class="eyebrow">WJG ARCHITECTS · NEW HOME PAGE · NOVEMBER 2026</span>
+          <h1 class="pk-h1">Wayne, pick a <em>direction.</em></h1>
+          <p class="pk-lede">Here are four ways your new home page could look.</p>
+          <p>The words are the same in all four. So are the projects and the logo. Only the design changes, so you're judging the look and not the content.</p>
+          <p>Open each one and scroll all the way to the bottom. Look at it on your phone too. Then tell me which one feels like WJG.</p>
+        </div>
+
+        <nav class="pk-index overshoot" aria-label="The four directions">
+          <p class="pk-index__h">THE FOUR DIRECTIONS</p>
+          <ol>
+            <li><a href="#d1"><span class="pk-index__n">01</span><span class="pk-index__name">Golden Section</span><span class="pk-index__line">The golden ratio on show</span></a></li>
+            <li><a href="#d2"><span class="pk-index__n">02</span><span class="pk-index__name">Drawn to Built</span><span class="pk-index__line">Drawings become buildings</span></a></li>
+            <li><a href="#d3"><span class="pk-index__n">03</span><span class="pk-index__name">Composition</span><span class="pk-index__line">A dark gallery with gold geometry</span></a></li>
+            <li><a href="#d4"><span class="pk-index__n">04</span><span class="pk-index__name">Get Set</span><span class="pk-index__line">Built to get the call</span></a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="wrap">
+        <h2 class="vh">While you look</h2>
+        <ul class="pk-tips">
+          <li><span class="pk-tips__k">LINKS</span>Links inside the demos (About, Residential and the rest) land on a placeholder. Those pages get built after you pick.</li>
+          <li><span class="pk-tips__k">SWITCHING</span>The small dark bar in the bottom left corner of every demo jumps between the four.</li>
+          <li><span class="pk-tips__k">MIXING</span>Mixing is fine. Like the top of one and the project section of another? Say so.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- The four directions -->
+    <section class="pk-dirs" aria-labelledby="dirs-h">
+      <h2 class="vh" id="dirs-h">The four directions</h2>
+
+      <article class="pk-dir" id="d1">
+        <div class="wrap pk-dir__grid">
+          <a class="pk-shot" href="demos/1-golden-section/index.html" aria-label="Open direction 1, Golden Section">
+            <span class="pk-shot__frame overshoot">
+              <span class="pk-shot__bar" aria-hidden="true">wjgarchitectsllc.com</span>
+              <picture>
+                <source srcset="images/directions/demo-1-desktop.webp" type="image/webp">
+                <img src="images/directions/demo-1-desktop.jpg" alt="Direction 1, Golden Section, on a desktop screen" width="1200" height="750" fetchpriority="high">
+              </picture>
+            </span>
+            <span class="pk-shot__phone">
+              <picture>
+                <source srcset="images/directions/demo-1-phone.webp" type="image/webp">
+                <img src="images/directions/demo-1-phone.jpg" alt="Direction 1 on a phone" width="480" height="960" loading="lazy">
+              </picture>
+            </span>
+          </a>
+          <div class="pk-dir__copy">
+            <span class="pk-dir__n">DIRECTION 01</span>
+            <h3 class="pk-dir__name">Golden Section</h3>
+            <p class="pk-dir__tag">The golden ratio, out in the open.</p>
+            <p>A bright, editorial page laid out on a 61.8 / 38.2 grid you can actually see. When it loads, the spiral draws itself over the Brastad house and settles on the front door. Further down, your five project types fill the first five squares of a golden rectangle.</p>
+            <dl class="pk-facts">
+              <div><dt>FEEL</dt><dd>Bright paper and serif headlines</dd></div>
+              <div><dt>GOLDEN RATIO</dt><dd>Visible</dd></div>
+              <div><dt>TRY THIS</dt><dd>Hover a project. It turns back into a drawing.</dd></div>
+            </dl>
+            <div class="pk-dir__go">
+              <a class="btn btn--outline" href="demos/1-golden-section/index.html">OPEN DIRECTION 1</a>
+              <a class="link-arrow" href="mailto:jonwolf@livewebstudios.com?subject=WJG%20home%20page%3A%20Direction%201%2C%20Golden%20Section">THIS IS THE ONE<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pk-dir pk-dir--flip" id="d2">
+        <div class="wrap pk-dir__grid">
+          <a class="pk-shot" href="demos/2-drawn-to-built/index.html" aria-label="Open direction 2, Drawn to Built">
+            <span class="pk-shot__frame overshoot">
+              <span class="pk-shot__bar" aria-hidden="true">wjgarchitectsllc.com</span>
+              <picture>
+                <source srcset="images/directions/demo-2-desktop.webp" type="image/webp">
+                <img src="images/directions/demo-2-desktop.jpg" alt="Direction 2, Drawn to Built, on a desktop screen" width="1200" height="750" loading="lazy">
+              </picture>
+            </span>
+            <span class="pk-shot__phone">
+              <picture>
+                <source srcset="images/directions/demo-2-phone.webp" type="image/webp">
+                <img src="images/directions/demo-2-phone.jpg" alt="Direction 2 on a phone" width="480" height="960" loading="lazy">
+              </picture>
+            </span>
+          </a>
+          <div class="pk-dir__copy">
+            <span class="pk-dir__n">DIRECTION 02</span>
+            <h3 class="pk-dir__name">Drawn to Built</h3>
+            <p class="pk-dir__tag">Every section is a sheet in a drawing set.</p>
+            <p>Title blocks, sheet numbers, even a transmittal for the contact form. Scroll, and the Brastad drawing turns into the photograph along a diagonal cut. Your real construction documents carry the How We Work section.</p>
+            <dl class="pk-facts">
+              <div><dt>FEEL</dt><dd>Cream paper and linework</dd></div>
+              <div><dt>GOLDEN RATIO</dt><dd>Hidden. The spacing still follows it.</dd></div>
+              <div><dt>TRY THIS</dt><dd>Drag the handle across any project. Press PLAY at the top for the five second film.</dd></div>
+            </dl>
+            <div class="pk-dir__go">
+              <a class="btn btn--outline" href="demos/2-drawn-to-built/index.html">OPEN DIRECTION 2</a>
+              <a class="link-arrow" href="mailto:jonwolf@livewebstudios.com?subject=WJG%20home%20page%3A%20Direction%202%2C%20Drawn%20to%20Built">THIS IS THE ONE<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pk-dir" id="d3">
+        <div class="wrap pk-dir__grid">
+          <a class="pk-shot pk-shot--night" href="demos/3-composition/index.html" aria-label="Open direction 3, Composition">
+            <span class="pk-shot__frame overshoot">
+              <span class="pk-shot__bar" aria-hidden="true">wjgarchitectsllc.com</span>
+              <picture>
+                <source srcset="images/directions/demo-3-desktop.webp" type="image/webp">
+                <img src="images/directions/demo-3-desktop.jpg" alt="Direction 3, Composition, on a desktop screen" width="1200" height="750" loading="lazy">
+              </picture>
+            </span>
+            <span class="pk-shot__phone">
+              <picture>
+                <source srcset="images/directions/demo-3-phone.webp" type="image/webp">
+                <img src="images/directions/demo-3-phone.jpg" alt="Direction 3 on a phone" width="480" height="960" loading="lazy">
+              </picture>
+            </span>
+          </a>
+          <div class="pk-dir__copy">
+            <span class="pk-dir__n">DIRECTION 03</span>
+            <h3 class="pk-dir__name">Composition</h3>
+            <p class="pk-dir__tag">A dark gallery for the buildings.</p>
+            <p>Your projects in black and white, with the geometry of proportion drawn over them in gold. Every photo was cropped so a real part of the building lands on the geometry. An entry. A gable. The landing of a stair.</p>
+            <dl class="pk-facts">
+              <div><dt>FEEL</dt><dd>Night blue with gold</dd></div>
+              <div><dt>GOLDEN RATIO</dt><dd>Visible</dd></div>
+              <div><dt>TRY THIS</dt><dd>Move over each project. The color comes back and the geometry draws in.</dd></div>
+            </dl>
+            <div class="pk-dir__go">
+              <a class="btn btn--outline" href="demos/3-composition/index.html">OPEN DIRECTION 3</a>
+              <a class="link-arrow" href="mailto:jonwolf@livewebstudios.com?subject=WJG%20home%20page%3A%20Direction%203%2C%20Composition">THIS IS THE ONE<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pk-dir pk-dir--flip" id="d4">
+        <div class="wrap pk-dir__grid">
+          <a class="pk-shot" href="demos/4-get-set/index.html" aria-label="Open direction 4, Get Set">
+            <span class="pk-shot__frame overshoot">
+              <span class="pk-shot__bar" aria-hidden="true">wjgarchitectsllc.com</span>
+              <picture>
+                <source srcset="images/directions/demo-4-desktop.webp" type="image/webp">
+                <img src="images/directions/demo-4-desktop.jpg" alt="Direction 4, Get Set, on a desktop screen" width="1200" height="750" loading="lazy">
+              </picture>
+            </span>
+            <span class="pk-shot__phone">
+              <picture>
+                <source srcset="images/directions/demo-4-phone.webp" type="image/webp">
+                <img src="images/directions/demo-4-phone.jpg" alt="Direction 4 on a phone" width="480" height="960" loading="lazy">
+              </picture>
+            </span>
+          </a>
+          <div class="pk-dir__copy">
+            <span class="pk-dir__n">DIRECTION 04</span>
+            <h3 class="pk-dir__name">Get Set</h3>
+            <p class="pk-dir__tag">The practical one. Built to make the phone ring.</p>
+            <p>Bright and friendly. Right under the headline, a visitor picks what they're building and sees the project that proves you've done it before. On a phone, CALL stays pinned to the bottom of the screen.</p>
+            <dl class="pk-facts">
+              <div><dt>FEEL</dt><dd>White, rounded cards</dd></div>
+              <div><dt>GOLDEN RATIO</dt><dd>Hidden</dd></div>
+              <div><dt>TRY THIS</dt><dd>Tap the six choices under the photo, from A NEW HOME to A DATA CENTER.</dd></div>
+            </dl>
+            <div class="pk-dir__go">
+              <a class="btn btn--outline" href="demos/4-get-set/index.html">OPEN DIRECTION 4</a>
+              <a class="link-arrow" href="mailto:jonwolf@livewebstudios.com?subject=WJG%20home%20page%3A%20Direction%204%2C%20Get%20Set">THIS IS THE ONE<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Side by side -->
+    <section class="pk-sec pk-compare" aria-labelledby="cmp-h">
+      <div class="wrap">
+        <span class="eyebrow">SIDE BY SIDE</span>
+        <h2 class="pk-h2" id="cmp-h">The short version.</h2>
+        <div class="pk-table" role="region" aria-labelledby="cmp-h" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col"><a href="#d1"><span>01</span>Golden Section</a></th>
+                <th scope="col"><a href="#d2"><span>02</span>Drawn to Built</a></th>
+                <th scope="col"><a href="#d3"><span>03</span>Composition</a></th>
+                <th scope="col"><a href="#d4"><span>04</span>Get Set</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">FEEL</th>
+                <td>Bright and editorial</td>
+                <td>Paper and linework</td>
+                <td>Dark gallery</td>
+                <td>Bright cards</td>
+              </tr>
+              <tr>
+                <th scope="row">GOLDEN RATIO</th>
+                <td><strong>Visible</strong></td>
+                <td>Hidden</td>
+                <td><strong>Visible</strong></td>
+                <td>Hidden</td>
+              </tr>
+              <tr>
+                <th scope="row">THE MOMENT PEOPLE REMEMBER</th>
+                <td>The spiral on the Brastad house</td>
+                <td>A drawing turning into a photo</td>
+                <td>Gold geometry drawing over the photos</td>
+                <td>"What are you building?"</td>
+              </tr>
+              <tr>
+                <th scope="row">STRONGEST AT</th>
+                <td>Showing how you think about proportion</td>
+                <td>Explaining what an architect actually does</td>
+                <td>Showing off the buildings</td>
+                <td>Getting the call</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- The drawings -->
+    <section class="pk-sec pk-drawings" aria-labelledby="drw-h">
+      <div class="wrap">
+        <div class="pk-sec__head">
+          <span class="eyebrow">ONE THING TO CHECK</span>
+          <h2 class="pk-h2" id="drw-h">These six drawings came from your photos.</h2>
+          <p>They're the "before" in the drawing-to-photo moments in three of the four directions. You'll read them closer than anyone, so please do. If a line is wrong, tell me which drawing and I'll pull it.</p>
+        </div>
+        <ul class="pk-drw">
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/brastad-exterior.webp" type="image/webp"><img src="images/drawn/brastad-exterior.jpg" alt="Line drawing of the Brastad-Knapp Residence exterior" width="1500" height="1000" loading="lazy"></picture>
+              <figcaption><span>01</span>Brastad-Knapp Residence, exterior</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/brastad-great-room.webp" type="image/webp"><img src="images/drawn/brastad-great-room.jpg" alt="Line drawing of the Brastad-Knapp Residence great room" width="1500" height="1000" loading="lazy"></picture>
+              <figcaption><span>02</span>Brastad-Knapp Residence, great room</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/670-belleville.webp" type="image/webp"><img src="images/drawn/670-belleville.jpg" alt="Line drawing of 670 Belleville Turnpike" width="1600" height="1200" loading="lazy"></picture>
+              <figcaption><span>03</span>670 Belleville Turnpike. The drawing shows entry steps that the shrubs hide in the photo. Are they right?</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/turning-point-toms-river.webp" type="image/webp"><img src="images/drawn/turning-point-toms-river.jpg" alt="Line drawing of Turning Point, Toms River" width="1206" height="905" loading="lazy"></picture>
+              <figcaption><span>04</span>Turning Point, Toms River. The sign is left blank on purpose.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/ohara-offices.webp" type="image/webp"><img src="images/drawn/ohara-offices.jpg" alt="Line drawing of the John O'Hara Construction offices" width="1333" height="1000" loading="lazy"></picture>
+              <figcaption><span>05</span>John O'Hara Construction offices</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture class="overshoot"><source srcset="images/drawn/sungard-stair.webp" type="image/webp"><img src="images/drawn/sungard-stair.jpg" alt="Line drawing of the SunGard lobby stair" width="900" height="1200" loading="lazy"></picture>
+              <figcaption><span>06</span>SunGard CRL4-5, lobby stair</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What I need -->
+    <section class="pk-sec pk-needs" aria-labelledby="need-h">
+      <div class="wrap pk-needs__grid">
+        <div class="pk-sec__head">
+          <span class="eyebrow">A FEW THINGS I NEED FROM YOU</span>
+          <h2 class="pk-h2" id="need-h">Whichever one you pick.</h2>
+        </div>
+        <ol class="pk-needs__list">
+          <li><h3>Your original logo file.</h3><p>The one I have is a small picture. An .ai, .eps, .svg or a PDF from whoever drew it would be perfect.</p></li>
+          <li><h3>A photo of the Schell porch, finished.</h3><p>The one on file was taken while the roofers were still on it.</p></li>
+          <li><h3>A quick yes or no on the data center photos.</h3><p>They're filed as "410 Comm." I have them as SunGard CRL4-5 in Carlstadt. Right?</p></li>
+          <li><h3>Your own line about the golden ratio.</h3><p>Two of the directions carry one. I wrote a stand-in. It should sound like you.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="pk-close" aria-labelledby="close-h">
+      <div class="wrap">
+        <div class="pk-close__in overshoot">
+          <h2 class="pk-h2" id="close-h">Tell me <em>which one.</em></h2>
+          <p>A number is plenty. Reply to my email or use the button.</p>
+          <a class="btn btn--primary" href="mailto:jonwolf@livewebstudios.com?subject=WJG%20home%20page%3A%20my%20pick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>EMAIL JON YOUR PICK</a>
+          <p class="pk-close__sign">Thanks, Wayne.<br><span>Jon Wolf / Live Web Studios</span></p>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="pk-foot">
+    <div class="wrap pk-foot__in">
+      <p>A private preview for WJG Architects, LLC.</p>
+      <div class="footer-lws">
+        <a class="footer-badge" href="https://livewebstudios.com" target="_blank" rel="noopener"><img src="images/verifiedsecured.png" alt="Verified and secured by Live Web Studios" width="150" height="37" loading="lazy"></a>
+        <span class="footer-credit">Powered by <a href="https://livewebstudios.com" target="_blank" rel="noopener">Live Web Studios</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

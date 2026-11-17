@@ -32,14 +32,15 @@ Started 2026-11-16. Everything here was decided so the build would not block. Ea
 3. **Demo 3 logo.** Shipped as the navy logo on a cream tab hanging from the top edge. The alternative is a white knockout, which needs the vector.
 4. **Formspree ID** is `REPLACE_ME`. While it is a placeholder the form shows its success state without sending anything, so the preview can be clicked through. Any real ID posts for real.
 5. **GA4 ID** is `G-XXXXXXXXXX`, commented out in every `<head>`.
-6. **Repo visibility.** Nothing is on GitHub yet. The handoff says private now. Decap will need it public later.
+6. **Repo visibility.** `livewebstudios/wjgarchitectsllc` was created PUBLIC (the handoff said private now, public later for Decap). The source, Wayne's photos and the open questions in this file are readable by anyone with the URL. Switch it to private in GitHub settings if that was not intended.
 7. **Schema type.** JSON-LD uses `ProfessionalService`. The LWS SEO spec maps architects to `Architect`, which is not a schema.org type. Worth correcting in `specs/seo-standards.md`.
 8. **Canonical.** All four demos point at `https://wjgarchitectsllc.com/` because each is a candidate for that URL. The chooser and the stub carry a placeholder comment instead. They are deleted at launch.
-9. **Insights cards** are placeholders, marked `data-placeholder` (three per demo). No dates, no authors.
-10. **Mobile action bar.** Its CALL button is filled, so on a phone there are two filled buttons on screen while the hero's LET'S TALK. is in view. That follows the handoff (CALL is the primary there). Say the word and the hero button goes outline below 48rem.
-11. **Demo 2 choices to confirm:** sub-sheet numbers A-4.1 (GET SET) and A-5.1 (INSIGHTS) were added so every section has a title block; labels are navy rather than gold; one redline color (`#9c3a1e`) is used for the revision cloud only.
-12. **Demo 4 choices to confirm:** the data center chip shows the SunGard conference room (an interior); the hero photo covers the right three quarters of the card so nothing is upscaled; the Brastad drawing and photo are both preloaded so the first wipe is instant (about 470KB together, over the 220KB hero target; drop the drawing preload to get it back).
-13. **Turning Point photo** is cropped to 1206 x 905 to remove a parked police vehicle at the left edge. It is a little soft on retina at its largest size in demo 4.
+9. **Pick-a-direction page** (`index.html`) is written to Wayne in Jon's voice. Its "THIS IS THE ONE" links and the closing button open an email to jonwolf@livewebstudios.com with the direction in the subject line.
+10. **Insights cards** are placeholders, marked `data-placeholder` (three per demo). No dates, no authors.
+11. **Mobile action bar.** Its CALL button is filled, so on a phone there are two filled buttons on screen while the hero's LET'S TALK. is in view. That follows the handoff (CALL is the primary there). Say the word and the hero button goes outline below 48rem.
+12. **Demo 2 choices to confirm:** sub-sheet numbers A-4.1 (GET SET) and A-5.1 (INSIGHTS) were added so every section has a title block; labels are navy rather than gold; one redline color (`#9c3a1e`) is used for the revision cloud only.
+13. **Demo 4 choices to confirm:** the data center chip shows the SunGard conference room (an interior); the hero photo covers the right three quarters of the card so nothing is upscaled; the Brastad drawing and photo are both preloaded so the first wipe is instant (about 470KB together, over the 220KB hero target; drop the drawing preload to get it back).
+14. **Turning Point photo** is cropped to 1206 x 905 to remove a parked police vehicle at the left edge. It is a little soft on retina at its largest size in demo 4.
 
 ## C. Not done yet (Session B)
 
