@@ -297,6 +297,14 @@
     });
   });
 
+  /* ---------- Dead links ----------
+     Preview build: each demo is a home page only. Links to inner pages are
+     href="#" and do nothing, rather than jumping to the top. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href="#"]');
+    if (a) { e.preventDefault(); }
+  });
+
   /* ---------- Shared with the demo scripts ---------- */
   window.WJG = { reduced: reduced, hasGsap: hasGsap, onEnter: onEnter, $: $, $$: $$, setD2b: setD2b, tweenD2b: tweenD2b };
 
