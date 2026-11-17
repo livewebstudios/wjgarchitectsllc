@@ -13,71 +13,134 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png">
   <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+  <link rel="preload" href="fonts/jost-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/welcome.css">
   <!-- GA4: replace G-XXXXXXXXXX (not needed on this preview page) -->
 </head>
 <body>
-  <main class="sheet" id="main">
+  <main class="page" id="main">
 
-    <header class="doc-head">
-      <img class="doc-logo" src="images/logoRGB.png" alt="WJG Architects, LLC" width="216" height="32">
-      <dl class="memo">
-        <div><dt>TO</dt><dd>Wayne J. Guskind, AIA, NCARB</dd></div>
-        <div><dt>FROM</dt><dd>Jon Wolf, Live Web Studios</dd></div>
-        <div><dt>DATE</dt><dd>November 17, 2026</dd></div>
-        <div><dt>RE</dt><dd>Your new home page</dd></div>
-      </dl>
+    <header class="intro">
+      <img class="intro-logo" src="images/logoRGB.png" alt="WJG Architects, LLC" width="216" height="32">
+      <p class="label">HOME PAGE PREVIEW · NOVEMBER 2026</p>
+      <h1>Three <em>directions</em> for the new WJG home page.</h1>
+      <p class="intro-line">Same words. Same projects. Same logo. Only the design changes, so you're judging the look and not the content. Open each one, then tell Jon which one feels like WJG.</p>
+      <p class="intro-note"><strong>Scroll each one all the way to the bottom.</strong> Look at it on your phone too. Each demo is a home page only, so the links inside don't go anywhere yet.</p>
     </header>
 
-    <h1>Three directions for the new home page</h1>
-
-    <p>Wayne,</p>
-    <p>Here are three directions for the new WJG home page. The words, the projects and the logo are the same in all three. Only the design changes, so you're judging the look and not the content.</p>
-    <p>Open each one and scroll all the way to the bottom. Look at it on your phone too. Then tell me which one feels like WJG.</p>
-
-    <h2>The three directions</h2>
-    <ol class="dirs">
-      <li>
-        <h3><a href="demos/drawn-to-built/index.html" target="_blank" rel="noopener">Drawn to Built</a></h3>
-        <p>Every section is a sheet in a drawing set, title blocks and all. Scroll, and the Brastad drawing turns into the photograph. Your real construction documents carry the How We Work section.</p>
-        <p class="try"><strong>Try this:</strong> drag the handle across any project.</p>
+    <ul class="cards">
+      <li class="card-item">
+        <a class="card" href="demos/drawn-to-built/index.html" target="_blank" rel="noopener">
+          <span class="art art-drawn" aria-hidden="true">
+            <img class="art-drawn__plan" src="images/drawn/brastad-exterior.webp" width="1500" height="1000" alt="" loading="lazy" decoding="async">
+            <img class="art-drawn__photo" src="images/projects/residential/brastad-exterior.webp" width="1500" height="1000" alt="" loading="lazy" decoding="async">
+            <span class="art-drawn__line"></span>
+            <span class="art-drawn__handle"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path d="m18 8 4 4-4 4M2 12h20M6 8l-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="art-drawn__block">A-1</span>
+          </span>
+          <span class="card-body">
+            <span class="card-no">01</span>
+            <h2 class="card-name">DRAWN TO BUILT</h2>
+            <span class="card-line">Every section is a sheet in a drawing set. Scroll, and the Brastad drawing turns into the photograph.</span>
+            <span class="card-try"><b>TRY THIS</b> Drag the handle across any project.</span>
+            <span class="card-open">OPEN <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="vh"> (opens in a new tab)</span></span>
+          </span>
+        </a>
       </li>
-      <li>
-        <h3><a href="demos/composition/index.html" target="_blank" rel="noopener">Composition</a></h3>
-        <p>A dark gallery. Your buildings in black and white, with the golden ratio drawn over them in gold. Each photo was cropped so a real part of the building lands on the geometry.</p>
-        <p class="try"><strong>Try this:</strong> move over each project. The color comes back and the geometry draws in.</p>
+      <li class="card-item">
+        <a class="card" href="demos/composition/index.html" target="_blank" rel="noopener">
+          <span class="art art-comp" aria-hidden="true">
+            <span class="art-comp__print">
+              <img src="images/projects/residential/brastad-great-room.webp" width="1500" height="1000" alt="" loading="lazy" decoding="async">
+              <svg class="art-comp__phi" viewBox="0 0 987 610" fill="none" preserveAspectRatio="none" focusable="false">
+                <path d="M610 0V610M610 377H987M754 377V610M610 466H754M699 377V466M699 432H754M720 432V466" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".45"/>
+                <path class="art-comp__spiral" d="M0 610A610 610 0 0 1 610 0A377 377 0 0 1 987 377A233 233 0 0 1 754 610A144 144 0 0 1 610 466A89 89 0 0 1 699 377A55 55 0 0 1 754 432A34 34 0 0 1 720 466A21 21 0 0 1 699 445A13 13 0 0 1 712 432A8 8 0 0 1 720 440" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke" pathLength="1"/>
+              </svg>
+            </span>
+          </span>
+          <span class="card-body">
+            <span class="card-no">02</span>
+            <h2 class="card-name">COMPOSITION</h2>
+            <span class="card-line">A dark gallery. Your buildings in black and white, with the golden ratio drawn over them in gold.</span>
+            <span class="card-try"><b>TRY THIS</b> Move over each project. The color comes back and the geometry draws in.</span>
+            <span class="card-open">OPEN <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="vh"> (opens in a new tab)</span></span>
+          </span>
+        </a>
       </li>
-      <li>
-        <h3><a href="demos/get-set/index.html" target="_blank" rel="noopener">Get Set</a></h3>
-        <p>The practical one. Bright, rounded cards. Right under the headline, a visitor picks what they're building and sees the project that proves you've done it before.</p>
-        <p class="try"><strong>Try this:</strong> tap the six choices under the photo. On a phone, CALL stays pinned to the bottom of the screen.</p>
+      <li class="card-item">
+        <a class="card" href="demos/get-set/index.html" target="_blank" rel="noopener">
+          <span class="art art-set" aria-hidden="true">
+            <span class="art-set__panel">
+              <span class="art-set__photo"><img src="images/projects/residential/davenport-after.webp" width="1333" height="1000" alt="" loading="lazy" decoding="async"></span>
+              <span class="art-set__chips">
+                <span class="is-on">A NEW HOME</span>
+                <span>AN ADDITION</span>
+                <span>A RESTAURANT</span>
+              </span>
+            </span>
+          </span>
+          <span class="card-body">
+            <span class="card-no">03</span>
+            <h2 class="card-name">GET SET</h2>
+            <span class="card-line">The practical one. Bright, rounded cards. A visitor picks what they're building and sees the project that proves you've done it before.</span>
+            <span class="card-try"><b>TRY THIS</b> Tap the six choices under the photo. On a phone, CALL stays pinned to the bottom.</span>
+            <span class="card-open">OPEN <svg class="arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="vh"> (opens in a new tab)</span></span>
+          </span>
+        </a>
       </li>
-    </ol>
-
-    <h2>A few notes</h2>
-    <ul>
-      <li>Each demo is a home page only. The links inside (About, Residential and so on) don't go anywhere yet. Those pages get built after you pick.</li>
-      <li>Mixing is fine. If you like the top of one and the project section of another, say so.</li>
     </ul>
 
-    <h2>Please check the drawings</h2>
-    <p>The line drawings in Drawn to Built and Get Set were traced from your photos. You'll read them closer than anyone. If a line is wrong, tell me which one and I'll pull it.</p>
-    <ol class="files">
-      <li><a href="images/drawn/brastad-exterior.jpg" target="_blank" rel="noopener">Brastad-Knapp Residence, exterior</a></li>
-      <li><a href="images/drawn/670-belleville.jpg" target="_blank" rel="noopener">670 Belleville Turnpike</a>. The drawing shows entry steps that the shrubs hide in the photo. Are they right?</li>
-      <li><a href="images/drawn/turning-point-toms-river.jpg" target="_blank" rel="noopener">Turning Point, Toms River</a>. The sign is left blank on purpose.</li>
-      <li><a href="images/drawn/ohara-offices.jpg" target="_blank" rel="noopener">John O'Hara Construction offices</a></li>
-      <li><a href="images/drawn/sungard-stair.jpg" target="_blank" rel="noopener">SunGard CRL4-5, lobby stair</a></li>
-    </ol>
+    <p class="mix">Mixing is fine. If you like the top of one and the project section of another, say so.</p>
 
-    <footer class="doc-foot">
-      <p>A private preview for WJG Architects, LLC.</p>
-      <div class="footer-lws">
-        <a class="footer-badge" href="https://livewebstudios.com" target="_blank" rel="noopener"><img src="images/verifiedsecured.png" alt="Verified and secured by Live Web Studios" width="150" height="37" loading="lazy"></a>
-        <span class="footer-credit">Powered by <a href="https://livewebstudios.com" target="_blank" rel="noopener">Live Web Studios</a></span>
-      </div>
-    </footer>
+    <section class="check" aria-labelledby="check-title">
+      <p class="label">FOR YOUR EYE</p>
+      <h2 id="check-title">Please check the drawings.</h2>
+      <p class="check-line">The line drawings in Drawn to Built and Get Set were traced from your photos. You'll read them closer than anyone. If a line is wrong, tell Jon which one and he'll pull it.</p>
+
+      <ol class="sheets">
+        <li>
+          <a class="sheet-card" href="images/drawn/brastad-exterior.jpg" target="_blank" rel="noopener">
+            <span class="sheet-art"><img src="images/drawn/brastad-exterior.webp" width="1500" height="1000" alt="" loading="lazy" decoding="async"></span>
+            <span class="sheet-body"><span class="sheet-no">A-1</span><span class="sheet-name">Brastad-Knapp Residence, exterior</span></span>
+            <span class="vh"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a class="sheet-card" href="images/drawn/670-belleville.jpg" target="_blank" rel="noopener">
+            <span class="sheet-art"><img src="images/drawn/670-belleville.webp" width="1600" height="1200" alt="" loading="lazy" decoding="async"></span>
+            <span class="sheet-body"><span class="sheet-no">A-2</span><span class="sheet-name">670 Belleville Turnpike</span><span class="sheet-q">The drawing shows entry steps that the shrubs hide in the photo. Are they right?</span></span>
+            <span class="vh"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a class="sheet-card" href="images/drawn/turning-point-toms-river.jpg" target="_blank" rel="noopener">
+            <span class="sheet-art"><img src="images/drawn/turning-point-toms-river.webp" width="1206" height="905" alt="" loading="lazy" decoding="async"></span>
+            <span class="sheet-body"><span class="sheet-no">A-3</span><span class="sheet-name">Turning Point, Toms River</span><span class="sheet-q">The sign is left blank on purpose.</span></span>
+            <span class="vh"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a class="sheet-card" href="images/drawn/ohara-offices.jpg" target="_blank" rel="noopener">
+            <span class="sheet-art"><img src="images/drawn/ohara-offices.webp" width="1333" height="1000" alt="" loading="lazy" decoding="async"></span>
+            <span class="sheet-body"><span class="sheet-no">A-4</span><span class="sheet-name">John O'Hara Construction offices</span></span>
+            <span class="vh"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a class="sheet-card" href="images/drawn/sungard-stair.jpg" target="_blank" rel="noopener">
+            <span class="sheet-art"><img src="images/drawn/sungard-stair.webp" width="900" height="1200" alt="" loading="lazy" decoding="async"></span>
+            <span class="sheet-body"><span class="sheet-no">A-5</span><span class="sheet-name">SunGard CRL4-5, lobby stair</span></span>
+            <span class="vh"> (opens in a new tab)</span>
+          </a>
+        </li>
+      </ol>
+    </section>
   </main>
+
+  <footer class="foot">
+    <p>Prepared for Wayne J. Guskind, AIA by <a href="https://livewebstudios.com" target="_blank" rel="noopener">Live Web Studios</a></p>
+    <a class="foot-badge" href="https://livewebstudios.com" target="_blank" rel="noopener"><img src="images/verifiedsecured.png" alt="Verified and secured by Live Web Studios" width="150" height="37" loading="lazy"></a>
+  </footer>
 </body>
 </html>
