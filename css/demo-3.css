@@ -822,9 +822,6 @@
   .demo-3 .site-footer__col { padding-top: var(--s-5); }
 }
 
-/* ---------- Action bar and demo bar on night ---------- */
-.demo-3 .demobar { box-shadow: 0 0 0 1px var(--line-night), 0 8px 21px rgba(0, 0, 0, 0.5); }
-
 /* ---------- Motion off ---------- */
 @media (prefers-reduced-motion: reduce) {
   .hero__img { animation: none; }

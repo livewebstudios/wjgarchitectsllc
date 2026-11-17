@@ -203,5 +203,5 @@ summary { cursor: pointer; }
 .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 
 @media print {
-  .demobar, .actionbar, .site-header, .menu { display: none !important; }
+  .actionbar, .site-header, .menu { display: none !important; }
 }
