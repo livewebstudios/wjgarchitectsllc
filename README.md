@@ -1,6 +1,6 @@
 # WJG Architects: home page demos
 
-Four home page options for WJG Architects, LLC (Hillsdale, NJ), built from one shared design system so Jon and Wayne can pick one. Private preview. Not indexed.
+Three home page options for WJG Architects, LLC (Hillsdale, NJ), built from one shared design system so Wayne can pick one. A fourth (Golden Section) was built and dropped on 2026-11-17; it is in git history at commit 744581f. Private preview. Not indexed.
 
 Built by Live Web Studios, November 2026.
 
@@ -8,11 +8,10 @@ Built by Live Web Studios, November 2026.
 
 | Path | What it is |
 |---|---|
-| `index.html` | "Pick a direction" page for Wayne: the four demos side by side, the six traced drawings to check, and what we still need from him |
-| `demos/1-golden-section/` | Bright editorial page on a visible 61.8 / 38.2 grid. Golden ratio visible. |
-| `demos/2-drawn-to-built/` | Paper and linework. Drawings become photos on scroll. Golden ratio hidden. |
-| `demos/3-composition/` | Dark gallery with golden overlays on black and white photos. Golden ratio visible. |
-| `demos/4-get-set/` | Bright rounded cards with a "What are you building?" selector. Golden ratio hidden. |
+| `index.html` | Welcome page for Wayne, laid out as a plain memo: the three directions, the traced drawings to check, and what we still need from him |
+| `demos/drawn-to-built/` | Paper and linework. Drawings become photos on scroll. Golden ratio hidden. |
+| `demos/composition/` | Dark gallery with golden overlays on black and white photos. Golden ratio visible. |
+| `demos/get-set/` | Bright rounded cards with a "What are you building?" selector. Golden ratio hidden. |
 | `soon/` | Stub that every not-yet-built page redirects to on Netlify |
 | `css/base.css` | Fonts, tokens (color, Fibonacci spacing, phi type scale), reset |
 | `css/kit.css`, `js/kit.js` | Shared components: nav, footer, action bar, overshoot corners, drawn-to-built, spiral, dimension strings, leader labels, count up, form |
@@ -57,5 +56,5 @@ Max 1600px wide, JPG quality 82 stepping down only to meet the size budget (300K
 - Remove the `X-Robots-Tag` header in `netlify.toml`, the `noindex` meta tag on each page, and the `Disallow: /` in `robots.txt`.
 - Remove the `/soon/` redirects in `_redirects` as real pages replace them. Add 301s for `/services-2/` and `/contact-us/`.
 - Replace the Formspree ID (`REPLACE_ME`) and the GA4 ID (`G-XXXXXXXXXX`).
-- Promote the chosen demo to `/`, delete the other three, the pick-a-direction page (`index.html`, `css/pick.css`, `images/directions/`) and the demo bar.
+- Promote the chosen demo to `/`, delete the other two, the welcome page (`index.html`, `css/welcome.css`) and the demo bar.
 - See `OPEN_QUESTIONS.md`.

@@ -7,11 +7,11 @@ Started 2026-11-16. Everything here was decided so the build would not block. Ea
 1. **Vector logo.** The only logo file is a 433 x 65 PNG. It ships as `images/logoRGB.png`, capped at 216px wide so it stays sharp. Ask Wayne for the original art, or approve a careful redraw.
 2. **Favicon.** Built from `cropped-icon.png`, which is a soft upscaled W. Needs the vector too.
 3. **The six traced drawings.** Wayne will read linework like a contractor reads a level. Show him the six files in `images/drawn/` before he sees them on a page. All six registered with their photos (see D). One note: the 670 Belleville drawing shows entry steps and railings where the photo has shrubs in front of them. They look like the real steps, but he should confirm.
-4. **The drafting table still** (`images/texture/drafting-table.jpg`, demos 1 and 2, "The firm"). It passed the handoff's checks (no text, no people, blank scale rule). But the vellum in it shows a house that is not a WJG project. If Wayne objects, swap it for his real wall section, `images/condocs/wall-section-55-railroad.jpg`, in the same frame. One line in each demo.
+4. **The drafting table still** (`images/texture/drafting-table.jpg`, Drawn to Built, "The firm"). It passed the handoff's checks (no text, no people, blank scale rule). But the vellum in it shows a house that is not a WJG project. If Wayne objects, swap it for his real wall section, `images/condocs/wall-section-55-railroad.jpg`, in the same frame. One line in each demo.
 5. **The two ground textures** carry faint invented linework (a floor plan on the paper one, a building section on the night one) at low opacity. Real alternatives exist: `floor-plan-117-woodcliff.jpg` and `elevation-760-washington.jpg`.
 6. **SunGard photos.** The data center photos were filed as "410 Comm". They are captioned SunGard CRL4-5, Carlstadt. Confirm.
 7. **Schell porch.** The "Proposed" photo is not the finished porch. It is mid-construction: a roofer on the porch roof, a second person on the porch, a ladder, a bare plywood gable. It was not used. Demo 4's before and after card uses the O'Hara warehouse-to-offices pair instead. The range line ("350 square foot front porch") is unchanged. A finished Schell photo would let the porch back in.
-8. **Proportion note** (demos 1 and 3): "1 : 1.618. The golden ratio. It has guided good proportion for a few thousand years." Wayne may want his own words.
+8. **Proportion note** (Composition): "1 : 1.618. The golden ratio. It has guided good proportion for a few thousand years." Wayne may want his own words.
 9. **Focal point notes in demo 3.** Each plate carries one short gold note that is true of its crop: THE CORNER ENTRY SITS IN THE EYE, THE LANDING MEETS THE GOLDEN LINES, THE GABLE SITS WHERE THE LINES CROSS, THE SIGN SITS IN THE EYE, THE DOOR STANDS ON THE GOLDEN LINE. They are accurate but they are our words.
 10. **Demo 3 hero.** The spiral's eye lands on the seating group in the Brastad great room (the cat on the sofa back, to be exact). The fireplace could not be used: putting it on the eye needs the photo enlarged past its native size. Confirm Wayne and the homeowner are fine with it.
 11. **Demo 2 drafting notes and captions.** TIMBER FRAME, 7,000 SF, WOODCLIFF LAKE, NJ on the hero. Captions: SITE PLAN · NEWARK MIXED USE, HAND SKETCHED DESIGN ELEVATIONS, WALL SECTION AT BUILDING ENTRY · 55 RAILROAD AVENUE, 55 RAILROAD AVENUE · BUILT. Confirm the wording, and that the Newark site plan can be shown publicly.
@@ -22,7 +22,7 @@ Started 2026-11-16. Everything here was decided so the build would not block. Ea
 
 ## B. For Jon
 
-1. **Pick a demo.** Everything below gets easier once three are deleted.
+1. **Demo 1 (Golden Section) was dropped on 2026-11-17.** The other three were renumbered and moved to `demos/drawn-to-built/`, `demos/composition/` and `demos/get-set/`. Golden Section is recoverable from git history (commit 744581f). Everything below gets easier once Wayne picks one and the other two are deleted.
 2. **Copy changes made** after you unlocked the deck. Every fact and subject is intact.
    - The eyebrow "HILLSDALE, NEW JERSEY · ARCHITECTS SINCE 2004" now sits inside the `<h1>`, ahead of "Mastering every space." That puts the keyword and the city in the H1 without touching Wayne's tagline.
    - The hero sub now starts "WJG Architects designs homes, restaurants, stores..." (was "Homes, restaurants, stores...").
@@ -34,8 +34,8 @@ Started 2026-11-16. Everything here was decided so the build would not block. Ea
 5. **GA4 ID** is `G-XXXXXXXXXX`, commented out in every `<head>`.
 6. **Repo visibility.** `livewebstudios/wjgarchitectsllc` was created PUBLIC (the handoff said private now, public later for Decap). The source, Wayne's photos and the open questions in this file are readable by anyone with the URL. Switch it to private in GitHub settings if that was not intended.
 7. **Schema type.** JSON-LD uses `ProfessionalService`. The LWS SEO spec maps architects to `Architect`, which is not a schema.org type. Worth correcting in `specs/seo-standards.md`.
-8. **Canonical.** All four demos point at `https://wjgarchitectsllc.com/` because each is a candidate for that URL. The chooser and the stub carry a placeholder comment instead. They are deleted at launch.
-9. **Pick-a-direction page** (`index.html`) is written to Wayne in Jon's voice. Its "THIS IS THE ONE" links and the closing button open an email to jonwolf@livewebstudios.com with the direction in the subject line.
+8. **Canonical.** All three demos point at `https://wjgarchitectsllc.com/` because each is a candidate for that URL. The welcome page and the stub carry a placeholder comment instead. They are deleted at launch.
+9. **Welcome page** (`index.html`) is a plain memo to Wayne in Jon's voice: the three directions, the five traced drawings in use (linked to the image files), and the four things we need from him. Its "send it here" link opens an email to jonwolf@livewebstudios.com.
 10. **Insights cards** are placeholders, marked `data-placeholder` (three per demo). No dates, no authors.
 11. **Mobile action bar.** Its CALL button is filled, so on a phone there are two filled buttons on screen while the hero's LET'S TALK. is in view. That follows the handoff (CALL is the primary there). Say the word and the hero button goes outline below 48rem.
 12. **Demo 2 choices to confirm:** sub-sheet numbers A-4.1 (GET SET) and A-5.1 (INSIGHTS) were added so every section has a title block; labels are navy rather than gold; one redline color (`#9c3a1e`) is used for the revision cloud only.
