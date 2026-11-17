@@ -13,7 +13,7 @@
 //   ../images/**
 
 import sharp from 'sharp';
-import { readdir, stat, mkdir } from 'node:fs/promises';
+import { readdir, stat, mkdir, writeFile } from 'node:fs/promises';
 import { join, dirname, relative, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -74,7 +74,7 @@ async function encode(makePipeline, width, budget) {
 async function emit(makePipeline, width, outBase, budget, before, label, jpgOnly = false) {
   await mkdir(dirname(outBase), { recursive: true });
   const { buf, w, q } = await encode(makePipeline, width, budget);
-  await sharp(buf).toFile(outBase + '.jpg');
+  await writeFile(outBase + '.jpg', buf);   // write the bytes we measured. toFile() would re-encode them.
   if (jpgOnly) {
     const m0 = await sharp(buf).metadata();
     report.push(`${label.padEnd(46)} ${kb(before)} -> jpg ${kb(buf.length)}  (no webp)  ${m0.width}x${m0.height} q${q}`);
@@ -86,7 +86,7 @@ async function emit(makePipeline, width, outBase, budget, before, label, jpgOnly
     webp = await makePipeline(w).webp({ quality: wq, effort: 6 }).toBuffer();
     if (webp.length <= buf.length) break;
   }
-  await sharp(webp).toFile(outBase + '.webp');
+  await writeFile(outBase + '.webp', webp);
   const m = await sharp(buf).metadata();
   report.push(`${label.padEnd(46)} ${kb(before)} -> jpg ${kb(buf.length)}  webp ${kb(webp.length)}  ${m.width}x${m.height} q${q}`);
   return { width: m.width, height: m.height };

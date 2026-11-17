@@ -164,7 +164,8 @@ summary { cursor: pointer; }
 :focus { outline: none; }
 :focus-visible {
   outline: 2px solid transparent;   /* shows in forced-colors mode */
-  box-shadow: var(--focus);
+  /* written out (not var(--focus)) so a section can re-point --focus-gap / --focus-ring locally */
+  box-shadow: 0 0 0 2px var(--focus-gap), 0 0 0 4px var(--focus-ring);
 }
 
 ::selection { background: var(--wjg-navy); color: var(--paper); }

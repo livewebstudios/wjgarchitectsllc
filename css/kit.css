@@ -387,7 +387,7 @@ html.menu-open { overflow: hidden; }
   background: var(--paper) center / 1.25rem no-repeat;
   box-shadow: 0 0 0 1px rgba(20, 22, 43, 0.35), 0 4px 13px rgba(20, 22, 43, 0.25);
 }
-.d2b__handle .ico { position: absolute; top: 50%; left: 50%; z-index: 1; translate: -50% -50%; color: var(--wjg-navy); }
+.d2b__handle .ico { max-width: none; position: absolute; top: 50%; left: 50%; z-index: 1; translate: -50% -50%; color: var(--wjg-navy); }
 .d2b__range:focus-visible ~ .d2b__handle::after { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--wjg-navy); }
 
 /* ---------- d. Dimension string: tick, line, value, line, tick ---------- */
@@ -470,7 +470,10 @@ html.menu-open { overflow: hidden; }
 .phi--flip-x { scale: -1 1; }
 .phi--flip-y { scale: 1 -1; }
 .phi--flip-xy { scale: -1 -1; }
-.phi__spiral, .phi-grid line, .phi-tri line { stroke-dasharray: 1; stroke-dashoffset: var(--draw); }
+/* Dash of 2 (twice the unit path length), not 1: with non-scaling-stroke Chrome
+   measures dashes in screen pixels, so a dash of 1 stops short of the eye on any
+   spiral shown wider than its 987px viewBox. 2 covers it up to 1974px wide. */
+.phi__spiral, .phi-grid line, .phi-tri line { stroke-dasharray: 2; stroke-dashoffset: calc(var(--draw) * 2); }
 .phi__squares { opacity: var(--sq); }
 .no-js .phi, .no-js .phi-grid, .no-js .phi-tri,
 .motion-failed .phi, .motion-failed .phi-grid, .motion-failed .phi-tri { --draw: 0; --sq: 0.6; }
@@ -515,10 +518,12 @@ html.menu-open { overflow: hidden; }
 }
 .field [aria-invalid="true"] { border-color: var(--err, #a3271c); }
 .field__err {
+  min-height: 1.4em;
   font-size: 0.875rem;
+  line-height: 1.4;
   color: var(--err, #a3271c);
 }
-.field__err::before { content: "! "; font-weight: 600; }
+.field__err:not(:empty)::before { content: "! "; font-weight: 600; }
 .form__foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
 .form__status { font-size: 1rem; }
 .form__status:empty { display: none; }

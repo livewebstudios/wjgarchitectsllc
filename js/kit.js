@@ -241,13 +241,16 @@
   /* ---------- Contact form: inline errors, inline success, no redirect ---------- */
   $$('[data-form]').forEach(function (form) {
     form.noValidate = true;
+    /* Error lines keep their space, so nothing shifts under the pointer when
+       a message appears or clears between mousedown and click. */
+    $$('.field__err', form).forEach(function (err) { err.hidden = false; });
     var status = $('.form__status', form);
     var button = $('[type="submit"]', form);
 
     var setError = function (field, msg) {
       var err = document.getElementById(field.id + '-err');
       field.setAttribute('aria-invalid', msg ? 'true' : 'false');
-      if (err) { err.textContent = msg || ''; err.hidden = !msg; }
+      if (err) { err.textContent = msg || ''; }
     };
     var check = function (field) {
       var v = field.value.trim();
@@ -297,5 +300,14 @@
   /* ---------- Shared with the demo scripts ---------- */
   window.WJG = { reduced: reduced, hasGsap: hasGsap, onEnter: onEnter, $: $, $$: $$, setD2b: setD2b, tweenD2b: tweenD2b };
 
-  if (hasGsap) { window.addEventListener('load', function () { ST.refresh(); }); }
+  window.addEventListener('load', function () {
+    if (hasGsap) { ST.refresh(); }
+    /* Arriving on a #hash from another page: the refresh above can cancel the
+       browser's own jump, so finish it once the layout has settled. */
+    var id = decodeURIComponent(window.location.hash.slice(1));
+    var target = id && document.getElementById(id);
+    if (target && window.scrollY < 8 && target.getBoundingClientRect().top > window.innerHeight * 0.5) {
+      window.setTimeout(function () { target.scrollIntoView({ behavior: 'auto', block: 'start' }); }, 60);
+    }
+  });
 })();
