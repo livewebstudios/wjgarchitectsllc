@@ -1,0 +1,206 @@
+/* WJG Architects. Base: fonts, tokens, reset, type.
+   Loaded by every page, before kit.css and the page's own demo-N.css. */
+
+/* ---------- Fonts (self-hosted) ---------- */
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/jost-var.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/plex-mono-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Architects Daughter";
+  src: url("../fonts/architects-daughter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Wayne's logo */
+  --wjg-navy: #20247c;          /* sampled from the logo. THE brand color. */
+  --wjg-navy-deep: #14162b;     /* ink. Body text on paper. */
+  --wjg-night: #0b0d26;         /* dark ground (demo 3) */
+
+  /* Paper */
+  --paper: #f5f1e8;
+  --paper-2: #ece6d8;
+  --white: #ffffff;
+  --cool: #f4f5f7;
+
+  /* Gold. Geometry, labels, small accents. Never body text. */
+  --gold: #b8893b;
+  --gold-hi: #d9b25a;           /* on night */
+  --gold-ink: #7a5a1c;          /* gold TEXT on paper, 5.6:1 */
+
+  --line: rgba(32, 36, 124, 0.18);
+  --line-strong: rgba(32, 36, 124, 0.42);
+  --line-night: rgba(255, 255, 255, 0.22);
+
+  /* Golden ratio */
+  --phi: 1.618;
+  --phi-major: 61.8%;
+  --phi-minor: 38.2%;
+
+  /* Fibonacci spacing: 8 13 21 34 55 89 144 */
+  --s-1: 0.5rem;
+  --s-2: 0.8125rem;
+  --s-3: 1.3125rem;
+  --s-4: 2.125rem;
+  --s-5: 3.4375rem;
+  --s-6: 5.5625rem;
+  --s-7: 9rem;
+
+  /* Type scale, ratio = square root of phi (1.272) */
+  --t-0: 0.786rem;
+  --t-1: 1rem;
+  --t-2: 1.272rem;
+  --t-3: 1.618rem;
+  --t-4: 2.058rem;
+  --t-5: 2.618rem;
+  --t-6: clamp(2.618rem, 5.2vw, 4.236rem);
+  --t-7: clamp(3.33rem, 8vw, 6.854rem);
+
+  --wrap: 76.25rem;             /* 1220px = 754 + 466, a golden pair */
+  --gutter: clamp(1.3125rem, 4.4vw, 3.4375rem);
+  --header-h: 5.5625rem;        /* 89px, shrinks to 55px */
+  --actionbar-h: 0px;           /* set below 48rem */
+
+  --f-sans: "Jost", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+  --f-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --f-hand: "Architects Daughter", "Bradley Hand", cursive;
+
+  /* Themeable roles. Each demo re-points these. */
+  --ground: var(--paper);
+  --ink: var(--wjg-navy-deep);
+  --ink-soft: #3c3f5c;
+  --accent: var(--wjg-navy);
+  --label: var(--gold-ink);
+  --rule: var(--line);
+  --rule-strong: var(--line-strong);
+  --btn-bg: var(--wjg-navy);
+  --btn-fg: var(--paper);
+  --btn-line: var(--wjg-navy);
+  --focus-gap: var(--ground);
+  --focus-ring: var(--wjg-navy);
+  --focus: 0 0 0 2px var(--focus-gap), 0 0 0 4px var(--focus-ring);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);   /* close to power2.out */
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + var(--s-3));
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: var(--actionbar-h);
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3, h4 { font-weight: 400; line-height: 1.08; text-wrap: balance; }
+p { max-width: 66ch; text-wrap: pretty; }
+
+img, picture, video, svg { display: block; max-width: 100%; }
+img, video { height: auto; }
+picture { display: block; }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+address { font-style: normal; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+summary { cursor: pointer; }
+[hidden] { display: none !important; }
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid transparent;   /* shows in forced-colors mode */
+  box-shadow: var(--focus);
+}
+
+::selection { background: var(--wjg-navy); color: var(--paper); }
+
+/* ---------- Helpers ---------- */
+.vh {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: fixed;
+  top: var(--s-1); left: var(--s-1);
+  z-index: 200;
+  padding: var(--s-2) var(--s-3);
+  background: var(--wjg-navy);
+  color: var(--paper);
+  font: 500 0.8125rem/1 var(--f-sans);
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+
+.wrap {
+  width: min(100% - (2 * var(--gutter)), var(--wrap));
+  margin-inline: auto;
+}
+
+.tnum { font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+@media print {
+  .demobar, .actionbar, .site-header, .menu { display: none !important; }
+}

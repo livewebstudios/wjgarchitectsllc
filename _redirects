@@ -1,0 +1,15 @@
+# Not for the public: build tooling and project notes
+/tools/*         /soon/index.html   404
+/*.md            /soon/index.html   404
+
+# Pages that come with the full build. Remove these rules then.
+/residential/*   /soon/   302
+/restaurants/*   /soon/   302
+/commercial/*    /soon/   302
+/data-center/*   /soon/   302
+/industrial/*    /soon/   302
+/about/*         /soon/   302
+/services/*      /soon/   302
+/insights/*      /soon/   302
+/faq/*           /soon/   302
+/contact/*       /soon/   302
